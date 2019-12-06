@@ -15,6 +15,7 @@ public class User {
 
     public void setName() throws IllegalNameLengthException {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Set name :");
         String name = scanner.nextLine();
         if (name.length() > 20) {
             throw new IllegalNameLengthException("Имя слишком длинное", name);
@@ -25,6 +26,7 @@ public class User {
     }
     public void setAge() throws IllegalAgeException{
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Set age : ");
         int age=scanner.nextInt();
         if (age<1||age>100){
             throw new IllegalAgeException("Слишком большой возраст",age);}
